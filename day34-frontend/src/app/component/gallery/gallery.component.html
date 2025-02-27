@@ -1,0 +1,9 @@
+<div class="gallery">
+
+    <img *ngFor="let photo of photos" 
+      [src]="photo.photo_url" 
+      [alt]="photo.caption" 
+      width="100px">
+
+</div>
+  
