@@ -32,6 +32,24 @@ export class CreateEmployeeComponent {
 
   }
 
+  isCtrlValid(ctrl: string): boolean {
+
+    const control = this.form.get(ctrl)
+    return !!control && control.valid && (control.dirty || control.touched)
+
+  }
+
+  isCtrlInvalid(ctrl: string): boolean {
+
+    const control = this.form.get(ctrl)
+    return !!control && control.valid && (control.dirty || control.touched)
+
+  }
+
+  get firstNameCtrl() {
+    return this.form.get('firstName')
+  }
+
   postForm() { 
 
     const values = this.form.value

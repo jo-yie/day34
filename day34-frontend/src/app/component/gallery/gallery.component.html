@@ -1,9 +1,28 @@
-<div class="gallery">
+<!-- <div class="gallery">
 
     <img *ngFor="let photo of photos" 
       [src]="photo.photo_url" 
       [alt]="photo.caption" 
       width="100px">
 
+</div> -->
+
+<div class="images" *ngFor="let photo of photos">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-subtitle>{{ photo.caption }}</mat-card-subtitle>
+    </mat-card-header>
+    <br />
+    <img mat-card-image class="card-image" [src]="photo.photo_url">
+    <br />
+    <mat-card-footer>
+      <div class="date-created">{{ photo.created_at }}</div>
+    </mat-card-footer>
+    <mat-card-actions>
+      <button mat-fab extended>
+        <mat-icon>favorite</mat-icon>
+        Like
+      </button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-  

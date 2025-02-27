@@ -1,0 +1,21 @@
+mat-card {
+    padding: 20px;
+    margin: 20px;
+    width: 40vw;
+    justify-self: center;
+    background-color: aliceblue;
+}
+
+mat-card-subtitle {
+    font-size: large;
+}
+
+.card-image {
+    border-radius: 10px;
+}
+
+.date-created {
+    font-size: 10px;
+    font-style: italic;
+    text-align: right;
+}
